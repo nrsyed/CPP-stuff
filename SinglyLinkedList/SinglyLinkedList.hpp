@@ -17,92 +17,92 @@ class SinglyLinkedList {
 
     public:
 
-	/*! @brief Return the item at \p index.
+    /*! @brief Return the item at \p index.
 
-		Example:
-		@code
-		SinglyLinkedList<int> s;
-		s.push(10);
-		s.push(12);
-		int x = s[1];
-		@endcode
+        Example:
+        @code
+        SinglyLinkedList<int> s;
+        s.push(10);
+        s.push(12);
+        int x = s[1];
+        @endcode
 
-		@param index: Index of item to return.
-		@return Reference to item.
-	*/
-	const T& operator[](int index) const;
+        @param index: Index of item to return.
+        @return Reference to item.
+    */
+    const T& operator[](int index) const;
 
-	/*! @brief Modify the item at \p index.
-		
-		Example:
-		@code
-		SinglyLinkedList<int> s;
-		s.push(10);
-		s.push(12);
-		s[1] = 5;
-		@endcode
+    /*! @brief Modify the item at \p index.
+        
+        Example:
+        @code
+        SinglyLinkedList<int> s;
+        s.push(10);
+        s.push(12);
+        s[1] = 5;
+        @endcode
 
-		@param index: Index of item to modify.
-		@return Reference to item.
-	*/
-	T& operator[](int index);
+        @param index: Index of item to modify.
+        @return Reference to item.
+    */
+    T& operator[](int index);
 
-	/*! @brief Constructor for a new list.
+    /*! @brief Constructor for a new list.
 
-		Specify type in declaration, e.g.:
-		@code
-		SinglyLinkedList<int> s;
-		@endcode
-	*/
-	SinglyLinkedList();
+        Specify type in declaration, e.g.:
+        @code
+        SinglyLinkedList<int> s;
+        @endcode
+    */
+    SinglyLinkedList();
 
-	~SinglyLinkedList();
+    ~SinglyLinkedList();
 
-	/*! @brief Returns the size of the list.
-		@return Number of elements in the list.
-	*/
-	int size(void);
+    /*! @brief Returns the size of the list.
+        @return Number of elements in the list.
+    */
+    int size(void);
 
-	/*! @brief Prints each element of the list to stdout.
-		
-		Requires the type of list members to be compatible with stream output
-		operator ("<<").
-	*/
-	void print(void);
+    /*! @brief Prints each element of the list to stdout.
+        
+        Requires the type of list members to be compatible with stream output
+        operator ("<<").
+    */
+    void print(void);
 
-	/*! @brief Inserts a new item at the given index.
-		@param index: Index at which to insert item.
-		@param item: Item to insert.
-	*/
-	void insert(int index, T item);
+    /*! @brief Inserts a new item at the given index.
+        @param index: Index at which to insert item.
+        @param item: Item to insert.
+    */
+    void insert(int index, T item);
 
-	/*! @brief Appends a new item to the end of the list.
-		@param item: Item to append.
-	*/
+    /*! @brief Appends a new item to the end of the list.
+        @param item: Item to append.
+    */
     void push(T item);
 
-	/*! @brief Removes and returns the item at the given index.
-		@param index: Index of the item to remove.
-		@return The item at \p index that was removed.
-	*/
-	T remove(int index);
+    /*! @brief Removes and returns the item at the given index.
+        @param index: Index of the item to remove.
+        @return The item at \p index that was removed.
+    */
+    T remove(int index);
 
-	/*! @brief Removes and returns the last item in the list.
+    /*! @brief Removes and returns the last item in the list.
 
-		@return The last item in the list.
-	*/
-	T pop(void);
+        @return The last item in the list.
+    */
+    T pop(void);
 
-	/*! @brief Swaps the positions of the two items at the given indices.
+    /*! @brief Swaps the positions of the two items at the given indices.
 
-		After the swap, the item previously at \p index1 will now be located at
-		\p index2, and the item previously at \p index2 will now be located at
-		\p index1.
+        After the swap, the item previously at \p index1 will now be located at
+        \p index2, and the item previously at \p index2 will now be located at
+        \p index1.
 
-		@param index1: Index of the first item.
-		@param index2: Index of the second item.
-	*/
-	void swap(int index1, int index2);
+        @param index1: Index of the first item.
+        @param index2: Index of the second item.
+    */
+    void swap(int index1, int index2);
 };
 
 // Template class declarations in a header are not compiled when the header
